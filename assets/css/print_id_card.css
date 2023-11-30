@@ -1,0 +1,126 @@
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url('../fonts/montserrat/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url('../fonts/montserrat/Montserrat-Regular.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat-Bold, 'Segoe UI', Tahoma, sans-serif;
+    font-size: 97.0%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container {
+    margin: 100px auto;
+    max-width: 550px;
+    border-radius: 5px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    padding: 10px;
+    /* height: 300px; */
+    display: grid;
+    place-items: center;
+    line-height: 25px;
+    position: relative;
+    z-index: 0;
+    transition: transform 0.5s ease;
+}
+
+.container:hover {
+    transform: rotateX(80deg);
+    transform-style: preserve-3d;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgb(6, 24, 44);
+    filter: blur(30px);
+    filter: opacity(0.15);
+}
+
+.front-end {
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 1px inset, rgba(6, 24, 44, 0.4) 0px 0px 0px 1px;
+    background-color: rgba(255, 255, 255, 0.795);
+    border-radius: 5px;
+    color: rgba(32, 51, 24, 0.884);
+    padding: 5px;
+    z-index: 10;
+    position: relative;
+}
+
+.front-end::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: rgba(191, 204, 47, 0.514);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.front-end::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: rgba(191, 204, 47, 0.514);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.informative {
+    margin-left: 1rem;
+    text-decoration: underline;
+}
+
+.missing_details {
+    margin: 15px 5px;
+}
+
+.missing_details p {
+    text-align: center;
+}
+
+body {
+    margin: auto;
+    display: grid;
+    place-items: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.grid-3 img {
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 140px;
+    padding: 2px;
+    display: inline;
+    width: 100%;
+    border: 1px solid #fff;
+    grid-row: 1/span 3;
+}
+
+.grid-3 nav {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    grid-column: 2/span 4;
+    padding: 5px;
+}

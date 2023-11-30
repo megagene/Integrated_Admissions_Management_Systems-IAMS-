@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+    font-size: 95.50%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 850px;
+    /* height: 996px; */
+    padding: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+body {
+    margin: 0 auto;
+    width: 950px;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+}
+
+body::before {
+    content: '';
+    background-image: url('../../images/pclogo.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    filter: opacity(0.1);
+    isolation: isolate;
+}
+
+fieldset {
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    line-height: 30px;
+    padding: 10px;
+    transform: translateY(10px);
+    outline: none;
+    border: none;
+    box-shadow: rgba(177, 163, 132, 0.445) 0px 0px 0px 3px;
+    background-color: rgba(7, 25, 73, 0.022);
+}
+
+fieldset:nth-child(n+2) {
+    padding: 5px;
+    transform: translateY(30px);
+    line-height: 40px;
+}
+
+fieldset:nth-child(n+2) .flex {
+    margin: 8px 0;
+}
+
+fieldset:nth-child(n+2) nav.flex label {
+    flex-basis: 20%;
+}
+
+fieldset:nth-child(n+2) nav.flex input[type=text] {
+    flex-basis: 80%;
+}
+
+fieldset div.header {
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(122, 63, 63, 0.5) 0px 0px 0px 1px;
+    color: rgba(39, 39, 34, 0.6);
+    background-color: rgba(122, 63, 63, 0.301);
+    width: 100%;
+    text-align: center;
+    font-size: large;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+fieldset div.header::before {
+    content: "  ";
+    position: absolute;
+    left: 5px;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(255, 255, 255, 0.459);
+    z-index: 10;
+}
+
+fieldset div.header::after {
+    content: "  ";
+    position: absolute;
+    right: 5px;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(255, 255, 255, 0.459);
+    z-index: 10;
+}
+
+input[type=text] {
+    pointer-events: none;
+    font-weight: 700;
+    flex-basis: 70%;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    overflow: visible;
+    background-color: rgba(240, 239, 212, 0.6);
+    color: rgba(39, 39, 34, 0.8);
+}
+
+label {
+    flex-basis: 30%;
+    align-self: center;
+    justify-self: stretch;
+    text-align: left;
+    color: rgba(39, 39, 34, 0.9);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.passportholder {
+    margin: 15px 0;
+    display: flex;
+    height: 150px;
+    justify-content: end;
+    margin-right: 50px;
+}
+
+.passport {
+    height: 150px;
+    width: 150px;
+    max-height: 150px;
+    max-width: 150px;
+    border: 1px solid black;
+}
+
+button#print {
+    background-color: #2312ef;
+    filter: opacity(0.8);
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 200px;
+    position: sticky;
+    bottom: 5px;
+    z-index: 20;
+    left: 40%;
+}
+
+.schooldetails {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.schooldetails nav#info {
+    width: 60%;
+    padding: 10px 20px;
+}
+
+.schooldetails nav#logo {
+    height: 150px;
+    width: 150px;
+    max-height: 150px;
+    max-width: 150px;
+    overflow: hidden;
+}
+
+.schooldetails nav#logo img {
+    width: 100%;
+    height: 100%;
+}
+
+#admission_citation {
+    color: rgba(39, 39, 34, 0.8);
+    text-transform: lowercase !important;
+}
+
+#admission_citation p {
+    margin: 5px 10px;
+}
+
+.informative {
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+* {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+}
+
+@page {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}
